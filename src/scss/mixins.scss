@@ -5,3 +5,27 @@
     box-sizing: border-box;
     margin: 0 auto;
 }
+
+@mixin btn($bg: $background-bt, $fs: 21px, $lh: 1.2, $ls: 0.54px, $w: 325px, $clr: $white) {
+    width: $w;
+    color: $clr;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+    background-color: $bg;
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+    margin: 25px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 500ms;
+    transition-property: background-color;
+    font-family: 'Oswald', sans-serif;
+    @content;
+
+    &:hover {
+        background-color: darken($bg, 15%);
+    }
+    
+}

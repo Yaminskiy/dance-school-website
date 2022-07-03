@@ -1,0 +1,41 @@
+.menu{
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li{
+            list-style-type: none;
+        }
+    }
+
+    a{
+        font-size: 25px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $white;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        margin: 0 3px;
+        transition-duration: 500ms;
+        transition-property: color, border-bottom-color;
+
+        &:hover{
+            border-bottom-color: $background-bt;
+            color: $background-bt;
+        }
+    }
+      
+}
+
+@media (max-width: 1024px){
+
+    .menu{
+
+        a{
+            font-size: 18px;
+        }
+    }
+}
+  

@@ -1,0 +1,183 @@
+.price{
+    padding: 100px 80px;
+    background: url('../img/price-bg.png') top left no-repeat $background-top;
+    box-sizing: border-box;
+
+    .price__title {
+        font-size: 75px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .price__info{
+        font-size: 33px;
+        line-height: 1.2;
+        text-align: center;
+        font-weight: 400;
+        color: $white;
+        font-family: 'Montserrat', sans-serif;
+        margin: 60px 0 80px 0;
+    }
+
+    .price__block{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .price__element{
+            flex-basis: 20%;
+            background-color: $background-bt;
+            padding: 60px 30px 10px 30px;
+            transition-duration: 500ms;
+            transition-property: background-color;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            svg{
+                display: block;
+                max-width: 100%;
+                margin: 0 auto 50px;
+            }
+
+            p {
+                font-size: 25px;
+                line-height: 1.2;
+                text-align: center;
+                margin-top: 20px;
+                color: $white;
+                font-weight: 400;
+                font-family: 'Montserrat', sans-serif;
+          
+                span {
+                  font-size: 37px;
+                  line-height: 1.2;
+                  text-decoration: none;
+                  color: $white;
+                  font-weight: 400;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-family: 'Oswald', sans-serif;
+                }
+          
+            }
+
+            .price__btn{
+                @include btn($bg:$background-top);
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            &:hover {
+                background-color: darken($background-bt, 15%);
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .price {
+        padding: 50px 20px;
+
+        .price__title{
+            font-size: 50px;
+        }
+
+        .price__info{
+            font-size: 29px;
+        }
+
+        .price__block{
+
+            .price__element{
+                flex-basis: 10%;
+                padding: 60px 10px 10px 10px;
+
+                .price__btn{
+                    max-width: 270px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+
+    .price {
+
+        .price__block{
+            justify-content: center;
+
+            .price__element{
+                flex-basis: 20%;
+                padding: 60px 30px 10px 30px;
+
+                &:last-child {
+                    margin-top: 30px;
+                }
+
+                .price__btn{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 880px) {
+
+    .price {
+
+        .price__info{
+            margin: 15px 0;
+        }
+
+        .price__block{
+
+            .price__element{
+                margin-right: 0px;
+                margin-top: 40px !important;
+
+                p{
+                    font-size: 20px;
+                    margin-top: 15px;
+
+                    span{
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .price {
+        padding: 20px 20px;
+
+        .price__title{
+            font-size: 30px;
+        }
+
+        .price__info{
+            font-size: 20px;
+        }
+
+        .price__block{
+
+            .price__element{
+                padding: 30px 10px 10px 10px;
+            }
+        }
+    }
+  
+}

@@ -1,0 +1,150 @@
+.offers{
+    padding: 100px 80px;
+    background: url('../img/offers-bg.png') top left no-repeat $background-bt;
+    box-sizing: border-box;
+
+    .offers__title {
+        font-size: 75px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+    }    
+
+    .offers__info{
+        font-size: 33px;
+        line-height: 1.2;
+        text-align: center;
+        font-weight: 400;
+        color: $white;
+        font-family: 'Montserrat', sans-serif;
+        margin: 60px 0 80px 0;
+    }
+
+    .offers__block{
+        display: flex;
+        justify-content: space-between;
+
+        .offers__element{
+            max-width: 80%;
+            background-color: $background-top;
+            padding-bottom: 30px;
+            transition-duration: 500ms;
+            transition-property: background-color;
+
+            img {
+                display: block;
+                max-width: 100%;
+                margin: 0 auto 20px;
+            }
+
+            p {
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 25px;
+                line-height: 1.2;
+                text-align: center;
+                margin-top: 20px;
+                color: $white;
+                font-weight: 400;
+                font-family: 'Montserrat', sans-serif;
+          
+                a {
+                  font-size: 37px;
+                  line-height: 1.2;
+                  text-decoration: none;
+                  color: $white;
+                  font-weight: 400;
+                  text-align: center;
+                  text-transform: uppercase;
+                  border-bottom: 2px solid transparent;
+                  transition-duration: 500ms;
+                  transition-property: color, border-bottom-color;
+                  font-family: 'Oswald', sans-serif;
+
+                  &:hover {
+                    border-bottom-color: $background-bt;
+                    color: $background-bt;
+                  }
+                }
+          
+            }
+
+            &:hover {
+                background-color: darken($background-top, 15%);
+            }
+        }
+
+
+    }
+    
+}
+
+@media (max-width: 1300px) {
+
+    .offers {
+        padding: 50px 20px;
+
+        .offers__title{
+            font-size: 50px;
+        }
+
+        .offers__info{
+            font-size: 29px;
+        }
+
+        .offers__block{
+
+            .offers__element{
+                max-width: 85% !important;
+            }
+        }
+    }
+  
+}
+  
+  @media (max-width: 768px) {
+  
+    .offers {
+
+        .offers__info{
+            margin: 15px 0;
+        }
+
+        .offers__block{
+
+            .offers__element{
+                max-width: 100% !important;
+
+                p{
+                    font-size: 20px;
+                    margin-top: 15px;
+
+                    a{
+                        font-size: 27px;
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+@media (max-width: 480px) {
+
+    .offers {
+        padding: 20px 20px;
+
+        .offers__title{
+            font-size: 30px;
+        }
+
+        .offers__info{
+            font-size: 20px;
+        }
+    }
+  
+}
