@@ -1,0 +1,105 @@
+.dance{
+    background-color: $background-bt;
+
+    .dance__item{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        .dance__img{
+            flex-basis: 50%;
+
+            img{
+                display: block;
+                max-width: 100%;
+            }
+        }
+
+        .dance__info{
+            flex-basis: 50%;
+            padding-left: 80px;
+            padding-right: 80px;
+
+            p{
+                font-size: 33px;
+                line-height: 1.2;
+                text-align: center;
+                font-weight: 400;
+                color: $white;
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+            }
+
+            .dance__title{
+                font-size: 75px;
+                line-height: 1.2;
+                font-weight: 700;
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: 'Oswald', sans-serif;
+                text-align: left;
+            }
+
+            .dance__btn{
+                @include btn($bg:$background-top);
+            }
+        }
+    }
+}
+
+@media (max-width: 880px) {
+  
+    .dance {
+
+        .dance__item{
+
+            .dance__img {
+                display: none;
+            }
+        
+            .dance__info {
+                padding-right: 20px;
+                padding-left: 20px;
+                flex-basis: 100%;
+
+                p{
+                    text-align: center;
+                }
+
+                .dance__title{
+                    text-align: center;
+                }
+
+                .dance__btn {
+                    max-width: 180px;
+                    font-size: 18px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+  
+}
+
+@media (max-width: 480px) {
+  
+    .dance {
+
+        .dance__item{
+        
+            .dance__info {
+
+                p{
+                    font-size: 20px;
+                }
+
+                .dance__title{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+  
+}

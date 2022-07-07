@@ -30,4 +30,24 @@ $(document).ready(function () {
         }
       }
     });
+
+    let show = true;
+    let countbox = ".counts__element";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false;
+        let w_top = $(window).scrollTop();
+        let e_top = $(countbox).offset().top;
+        let w_height = $(window).height();
+        let d_height = $(document).height();
+        let e_height = $(countbox).outerHeight();
+        if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            $('.counts__number').css('opacity', '1');
+            $('.counts__number').spincrement({
+                thousandSeparator: "",
+                duration: 6000
+            });
+             
+            show = false;
+        }
+    });
 });
